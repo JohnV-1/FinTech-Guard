@@ -1,5 +1,10 @@
 # FinTech Guard: Sistema de Detección de Fraudes Financieros
 
+## Integrantes del equipo:
+* Juan Pablo Burgos 755886
+* John Daniel Villa 770304
+* Josue Delgado 758307
+
 ## Descripción del Proyecto
 FinTech Guard es una aplicación diseñada para ayudar a identificar posibles fraudes financieros mediante el análisis de información de clientes, cuentas bancarias, tarjetas y transacciones. Está dirigida a analistas de seguridad de instituciones financieras, permitiéndoles consultar expedientes, revisar operaciones sospechosas e identificar redes de fraude.
 
