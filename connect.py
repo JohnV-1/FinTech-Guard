@@ -1,5 +1,6 @@
 from pymongo import MongoClient
 from cassandra.cluster import Cluster
+import pydgraph
 
 def connect_mongo():
     try:
@@ -28,6 +29,28 @@ def connect_cassandra():
         print(f"Error conectando a Cassandra: {e}")
 
 
+def connect_dgraph():
+    try:
+        # Conexión al contenedor local de Dgraph
+        stub = pydgraph.DgraphClientStub("localhost:9080")
+        client = pydgraph.DgraphClient(stub)
+
+        # Hacemos una consulta sencilla para comprobar la conexión
+        txn = client.txn(read_only=True)
+        try:
+            txn.query("{ test(func: uid(0x1)) { uid } }")
+        finally:
+            txn.discard()
+
+        print("Conexión exitosa a Dgraph.")
+        return client
+
+    except Exception as e:
+        print(f"Error conectando a Dgraph: {e}")
+        return None
+
+
 if __name__ == "__main__":
     db_mongo = connect_mongo()
     session_cassandra = connect_cassandra()
+    client_dgraph = connect_dgraph()

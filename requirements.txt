@@ -5,3 +5,4 @@ dnspython==2.9.1
 geomet==1.1.0
 pymongo==4.19.0
 wrapt==2.5.2
+pydgraph==25.2.0
