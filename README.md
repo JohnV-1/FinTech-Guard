@@ -61,7 +61,7 @@ source venv/bin/activate
 ```bash
 pip install -r requirements.txt
 ```
-6.Requisitos de Bases de Datos (Docker):<br>
+6. Requisitos de Bases de Datos (Docker):<br>
 Antes de correr el código (connect.py o main.py), asegúrate de tener Docker instalado y los contenedores de MongoDB, Cassandra y Dgraph corriendo en tu máquina local.<br>
 **Puertos de cada base de datos:**
 - Cassandra: 9042:9042
